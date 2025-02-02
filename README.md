@@ -94,6 +94,8 @@ Each thread:
 - Threads are created using `pthread_create`.
 - After processing, `pthread_join` ensures all threads complete execution.
 
+![code](images/image_3.png)
+
 ### Reducer Code
 The Reducer reads data from named pipes, groups it by key, and aggregates the results.
 
@@ -114,6 +116,8 @@ Groups key-value pairs by key.
 Aggregates values for each unique key.
 
 **Output:** The sum of values for each key.
+
+![code](images/image_4.png)
 
 ---
 
