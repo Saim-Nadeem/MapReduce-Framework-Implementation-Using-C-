@@ -17,7 +17,6 @@ Designed to replicate distributed data processing on a single machine using pthr
 - [💻 Code Overview](#-code-overview)
 - [📈 Sample Output](#-sample-output)
 - [✅ Conclusion](#-conclusion)
-- [🚀 Future Enhancements](#-future-enhancements)
 - [▶️ How to Run](#-how-to-run)
 
 ---
@@ -66,13 +65,11 @@ Mimics how distributed systems process large text datasets using:
 ## 💻 Code Overview
 
 ### 🔹 Mapper Code
-
 - `make_chunks_function()` – Splits input into equal chunks
 - `thread_mapper_function()` – Each thread emits (`word`, `1`)
 - Uses `pthread_mutex` for synchronization
 
 ### 🔹 Reducer Code
-
 - `pipe_read()` – Reads named pipes
 - `shuffle_function()` – Groups key-value pairs
 - `reducer_function()` – Sums values per key
@@ -127,15 +124,6 @@ Key: yellow → 2
 ✅ Successfully simulated MapReduce locally  
 ✅ Threaded input splitting + named pipe communication  
 ✅ Accurate aggregation using reducer logic  
-
----
-
-## 🚀 Future Enhancements
-
-1. Multi-machine distributed execution
-2. Fault tolerance for thread/pipe failures
-3. Dynamic chunk allocation and load balancing
-4. Scalable data structures for big data
 
 ---
 
